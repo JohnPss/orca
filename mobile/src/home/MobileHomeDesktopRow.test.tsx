@@ -134,7 +134,7 @@ describe('MobileHomeDesktopRow', () => {
       verdict: { kind: 'warning', label: "Can't connect", detail: 'Check Tailscale' }
     })
     const status = texts.find((node) => node.children.includes("Can't connect"))
-    expect(status?.props.style).toContainEqual({ color: colors.statusAmber })
+    expect([status?.props.style].flat()).toContainEqual({ color: colors.statusAmber })
   })
 
   it('shows and announces the fix for an offline desktop', async () => {
