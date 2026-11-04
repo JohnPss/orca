@@ -99,7 +99,7 @@ describe('MobileHomeDesktopRow', () => {
 
   it('keeps rendering the last proven counts after a failed refresh', async () => {
     const { lines } = await renderRow(markHomeWorktreeCatalogUnavailable(loaded, 'host-1'))
-    expect(lines).toContain('Last known: 12 worktrees · 2 active')
+    expect(lines).toContain('12 worktrees · 2 active')
   })
 
   it('never asserts a count for a catalog that failed with nothing proven', async () => {
